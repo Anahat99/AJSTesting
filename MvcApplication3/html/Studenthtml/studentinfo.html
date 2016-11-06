@@ -1,0 +1,119 @@
+﻿<div class="container form-controls">
+    <h2>{{Title}}</h2>
+    <style>
+        .top10 { margin-top:10px; margin-bottom:10px; }
+
+        .form-controls {
+            display: block;
+            width: 100%; /* THIS */
+            height: 100%;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555; /* THIS */
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc; /* THIS */
+            border-radius: 4px; /* THIS */
+        }
+
+
+    </style>
+
+    <!--<div class="row">
+        <div class="col-sm-6">
+            <select ng-model="City.SMID" ng-change="oncatchange()"  ng-options="c.SMID as c.SName for c in Statedata">
+
+             </select>
+        </div>
+    </div>-->
+    <div class="row">
+        <div class="col-sm-3">
+           <h4>Student Name</h4> 
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" ng-model="StudentInfo.SName" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+           <h4>Student Age</h4> 
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" ng-model="StudentInfo.SAge" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+           <h4>Student ContactNo.</h4> 
+        </div>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" ng-model="StudentInfo.SContactNo" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+           <h4>State</h4> 
+        </div>
+        <div class="col-sm-3">
+            <select ng-model="StudentInfo.SMID" ng-change="oncatchange(StudentInfo.SMID)" ng-options="c.SMID as c.SName for c in Statedata">
+
+             </select>
+
+        </div>
+       
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+           <h4>City</h4> 
+        </div>
+        <div class="col-sm-3">
+            <select ng-model="StudentInfo.CID"   ng-options="c.CID as c.CName for c in CityData">
+
+             </select>
+        </div>
+
+    </div>
+    
+    <div class="row top10">
+        <div class="col-sm-6">
+        <input type="submit"  name="Submit" ng-click="SaveStudentInfo()" value="Submit" class="btn btn-primary center-block" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <table class="table table-bordered">
+                <thead>
+                    <th>StudentID</th>
+                    <th>StudentName</th>
+                    <th>Age</th>
+                    <th>ContactNo</th>
+                    <th>StateName</th>
+                    <th>CityName</th>
+                    <th><input type="checkbox"   ng-click="checkAll()" /></th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="g in StudentInfoData">
+                    <td>{{g.SIID}}</td>
+                    <td>{{g.SName}}</td>
+                    <td>{{g.SAge}}</td>
+                    <td>{{g.SContactNo}}</td>
+                    <td>{{g.StateName}}</td>
+                    <td>{{g.CityName}}</td>     
+                     <td><input type="checkbox" checklist-model="user.StudentInfoData" checklist-value="g.SIID" /></td>                   
+                   </tr>
+                </tbody>
+                
+            </table>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+    
+    <label ng-repeat="role in roles">
+  <input type="checkbox" checklist-model="user.roles" checklist-value="role"> {{role}}
+</label>
+            <input type="submit"  name="Submit" ng-click="checkAll()" value="CheckAll" class="btn btn-primary center-block" />
+</div>

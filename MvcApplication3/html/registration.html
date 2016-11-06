@@ -1,0 +1,90 @@
+﻿<div class="container">
+    <h2>{{Title}}</h2>
+    <div class="row">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" ng-model="Emp.Name" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" ng-model="Emp.Email" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" ng-model="Emp.Password" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" ng-model="Emp.City" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" ng-model="Emp.Country" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <input type="text" class="form-control" ng-model="Emp.Mobile" />
+        </div>
+    </div>
+    <div class="row">
+        <input type="submit" ng-click="SaveEmp()" name="Submit" value="Submit" class="btn btn-primary" />
+    </div>
+
+
+
+    <div class="row well">
+        <div class="col-sm-6">
+            <!--<span ng-bind="EmpId">
+            </span>
+            <span ng-bind="Name">
+            </span>
+            <span ng-bind="Email">
+            </span>-->
+        
+
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>City</th>
+                    <th>Edit</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="g in empdata">
+                        <td>{{g.EmpId}}</td>
+                        <td>{{g.Name}}</td>
+                        <td>{{g.Email}}</td>
+                        <td>{{g.City}}</td>
+                        <td><a href="#" ng-click="show(g.EmpId)">Edit</a></td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <!--<table>
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>City</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="g in empdataByID">
+                        <td>{{g.EmpId}}</td><td><a class="button">Edit</a></td>
+                        <td>{{g.Name}}</td><td><a class="button">Edit</a></td>
+                        <td>{{g.Email}}</td><td><a class="button">Edit</a></td>
+                        <td>{{g.City}}</td><td><a class="button">Edit</a></td>
+                    </tr>
+                </tbody>
+
+            </table>-->
+        </div>
+        <div class="col-sm-6">
+        </div>
+    </div>
+</div>

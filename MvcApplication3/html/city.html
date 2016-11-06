@@ -1,0 +1,69 @@
+﻿<div class="container form-controls">
+    <h2>{{Title}}</h2>
+    <style>
+        .top10 { margin-top:10px; margin-bottom:10px; }
+
+        .form-controls {
+            display: block;
+            width: 100%; /* THIS */
+            height: 100%;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555; /* THIS */
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc; /* THIS */
+            border-radius: 4px; /* THIS */
+        }
+
+
+    </style>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <select ng-model="City.SMID" ng-change="oncatchange()"  ng-options="c.SMID as c.SName for c in Statedata">
+
+             </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <input type="text" class="form-control" ng-model="City.CName" />
+        </div>
+    </div>
+    
+    <div class="row top10">
+        <div class="col-sm-6">
+        <input type="submit" ng-click="SaveCity()" name="Submit" value="Submit" ng-if="!isEdit" class="btn btn-primary center-block" />
+        <input type="submit" ng-click="EditCity()" name="edit" value="edit" ng-if="isEdit" class="btn btn-primary center-block" />
+        <input type="submit" ng-click="CancelState()" name="edit" value="cancel" ng-if="isEdit" class="btn btn-primary right" />
+        </div>
+    </div>
+    
+
+    <div class="row">
+        <div class="col-sm-6">
+            <table class="table table-bordered">
+                <thead>
+                    <th>StateName</th>
+                    <th>CityId</th>
+                    <th>CityName</th>
+                    <th>UpdateAction</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="g in CityData">
+                    <td>{{g.SName}}</td>
+                    <td>{{g.CID}}</td>
+                    <td>{{g.CName}}</td>                        
+                    <td><a style="cursor:pointer;" ng-click="GetCityDetail(g.CID)">Update</a></td>
+                   </tr>
+                </tbody>
+                
+            </table>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+</div>

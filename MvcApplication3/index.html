@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <base href="/" />
+     <script type="text/javascript">
+         var FTVer = '0aq';
+         var RelDate = '19th March 2016';
+    </script>
+</head>
+<body ng-app="app">
+    <div class="container" ng-controller="mainCtrl">
+        <div class="container">
+		<div class="row">
+		<div class="col-md-3">
+			<ul class="nav">
+				<li><a href="/registration"> 1-One </a></li>
+				<li><a href="/state"> 2-State</a></li>
+                <li><a href="/city"> 3-City</a></li>
+                <li><a href="/coursemaster"> 4-CourseMaster</a></li>
+                <li><a href="/studentinfo"> 5-StudentInfo</a></li>
+                <li><a href="/subjectmaster"> 6-SubjectMaster</a></li>
+                <li><a href="/branchmaster"> 7-BranchMaster</a></li>
+                <li><a href="/Route08"> 8-TestState</a></li>
+			</ul>
+		</div>
+		<div class="col-md-9">
+		  	<div ng-view></div>
+		</div>
+		</div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/MultiCheckBox.js"></script>
+    <script type="text/javascript">
+        var script = document.createElement('script');
+        script.src = 'js/services.js?rel=' + FTVer;
+        document.write(script.outerHTML);
+        script.src = 'js/app.js?rel=' + FTVer;
+        document.write(script.outerHTML);
+    </script>
+
+</body>
+</html>
