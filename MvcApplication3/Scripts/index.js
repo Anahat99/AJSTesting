@@ -49,6 +49,6 @@ app.config(['$routeProvider',
           }).
         
         otherwise({
-            templateUrl: 'Error.html'
+            templateUrl: 'Error1.html'
         });
   }]);
